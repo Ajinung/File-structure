@@ -20,11 +20,11 @@ root.render(
     <Suspense
     // fallback={<Loading />}
     >
-      <QueryClientProvider client={client}>
-        {/* <App /> */}
-        <RouterProvider router={element} />
-        <ReactQueryDevtools />
-      </QueryClientProvider>
+      {/* <QueryClientProvider client={client}> */}
+      <App />
+      {/* <RouterProvider router={element} /> */}
+      {/* <ReactQueryDevtools /> */}
+      {/* </QueryClientProvider> */}
     </Suspense>
   </React.StrictMode>
 );
