@@ -5,10 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Suspense } from "react";
 import { RouterProvider } from "react-router-dom";
-// import { element } from "./routes/routes";
 // import Loading from "./components/Loading";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { element } from "./routes/routes";
 
 const client = new QueryClient();
 
@@ -20,11 +20,11 @@ root.render(
     <Suspense
     // fallback={<Loading />}
     >
-      {/* <QueryClientProvider client={client}> */}
-      <App />
-      {/* <RouterProvider router={element} /> */}
-      <ReactQueryDevtools />
-      {/* </QueryClientProvider> */}
+      <QueryClientProvider client={client}>
+        {/* <App /> */}
+        <RouterProvider router={element} />
+        <ReactQueryDevtools />
+      </QueryClientProvider>
     </Suspense>
   </React.StrictMode>
 );
