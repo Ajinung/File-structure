@@ -12,6 +12,9 @@ const SideBar = () => {
         <NavLink to="about" style={{ textDecoration: "none" }}>
           <p>About</p>
         </NavLink>
+        <NavLink to="/" style={{ textDecoration: "none" }}>
+          <h3>Back to home page</h3>
+        </NavLink>
       </Container>
     </div>
   );
@@ -34,6 +37,18 @@ const Container = styled.div`
     margin: 0;
     text-decoration: none;
     color: #fff;
+
+    :hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  h3 {
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weiight: 200;
 
     :hover {
       cursor: pointer;
