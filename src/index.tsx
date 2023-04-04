@@ -8,7 +8,7 @@ import { RouterProvider } from "react-router-dom";
 // import Loading from "./components/Loading";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { element } from "./routes/allRoutes";
+import { element } from "./routes/AllRoutes";
 
 const client = new QueryClient();
 
