@@ -3,7 +3,7 @@ import { HomeLayout } from "../components";
 import { About, Home } from "../pages/landingpage";
 import { ErrorBoundary, NotFound } from "../utils";
 import { DashboardLayout } from "../components/layouts/dashboardlayout";
-import { DashboardHome } from "../pages";
+import { DashboardAbout, DashboardHome } from "../pages";
 
 export const element = createBrowserRouter([
   {
@@ -33,6 +33,10 @@ export const element = createBrowserRouter([
         element: <DashboardHome />,
         errorElement: <ErrorBoundary />,
         hasErrorBoundary: true,
+      },
+      {
+        path: "about",
+        element: <DashboardAbout />,
       },
     ],
   },
