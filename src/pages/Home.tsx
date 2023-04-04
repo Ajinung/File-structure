@@ -3,13 +3,7 @@ import { Footer, Header } from "../components";
 import { Outlet } from "react-router-dom";
 
 const Home = () => {
-  return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
-  );
+  return <div>Home</div>;
 };
 
 export default Home;
