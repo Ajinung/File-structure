@@ -12,7 +12,7 @@ const DashboardHome = () => {
 export default DashboardHome;
 
 const Container = styled.div`
-  width: calc(100% - 200px);
-  height: 100%;
+  width: calc(100vw - 250px);
+  height: 100vh;
   background-color: orangered;
 `;

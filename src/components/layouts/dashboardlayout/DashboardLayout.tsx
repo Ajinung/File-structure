@@ -5,16 +5,13 @@ import styled from "styled-components";
 
 const DashboardLayout = () => {
   return (
-    <Container>
+    <div style={{ display: "flex" }}>
+      {/* <Container> */}
       <SideBar />
       <Outlet />
-    </Container>
+      {/* </Container> */}
+    </div>
   );
 };
 
 export default DashboardLayout;
-
-const Container = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
