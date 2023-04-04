@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { HomeLayout } from "../components";
-import { Home } from "../pages";
+import { About, Home } from "../pages";
+import { ErrorBoundary, NotFound } from "../utils";
 
 export const element = createBrowserRouter([
   {
@@ -10,7 +11,25 @@ export const element = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+        errorElement: <ErrorBoundary />,
+        hasErrorBoundary: true,
+      },
+      {
+        path: "about",
+        element: <About />,
+        errorElement: <ErrorBoundary />,
+        hasErrorBoundary: true,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <h2>user dashboard</h2>,
+    errorElement: <ErrorBoundary />,
+    hasErrorBoundary: true,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
