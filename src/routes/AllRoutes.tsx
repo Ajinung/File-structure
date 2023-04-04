@@ -4,6 +4,7 @@ import { About, Home } from "../pages/landingpage";
 import { ErrorBoundary, NotFound } from "../utils";
 import { DashboardLayout } from "../components/layouts/dashboardlayout";
 import { DashboardAbout, DashboardHome } from "../pages";
+import { fetchDictionary } from "../utils/api";
 
 export const element = createBrowserRouter([
   {
@@ -33,6 +34,8 @@ export const element = createBrowserRouter([
         element: <DashboardHome />,
         errorElement: <ErrorBoundary />,
         hasErrorBoundary: true,
+        //must load before fetchign the page
+        loader: fetchDictionary,
       },
       {
         path: "about",
