@@ -8,7 +8,7 @@ import { RouterProvider } from "react-router-dom";
 // import Loading from "./components/Loading";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-// import { element } from "./routes/AllRoutes";
+import { element } from "./routes/AllRoutes";
 
 const client = new QueryClient();
 
@@ -21,8 +21,8 @@ root.render(
     // fallback={<Loading />}
     >
       {/* <QueryClientProvider client={client}> */}
-      <App />
-      {/* <RouterProvider router={element} /> */}
+      {/* <App /> */}
+      <RouterProvider router={element} />
       {/* <ReactQueryDevtools /> */}
       {/* </QueryClientProvider> */}
     </Suspense>
