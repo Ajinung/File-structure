@@ -12,7 +12,7 @@ const DashboardHome = () => {
   return (
     <div>
       <Container>
-        <p>word:</p>
+        <p>word::</p>
 
         {data.list?.map((props: any) => (
           <p>{props.definition}</p>
